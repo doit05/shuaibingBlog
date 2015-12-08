@@ -1,0 +1,9 @@
+request设置头部
+var options = {
+          'url': url,
+          encoding: 'utf8',
+          headers:{
+            "User-Agent" : 'Mozilla/5.0' 
+          },
+          gzip: true
+      };
