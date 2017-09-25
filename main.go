@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	//"fmt"
 	"github.com/gin-gonic/gin"
 	"mysite/helper/apicode"
 	"shuaibingBlog/helper"
@@ -48,19 +48,16 @@ func main() {
 	}))
 
 	authorized.POST("admin", func(c *gin.Context) {
-		test := c.MustGet(gin.AuthUserKey).(string)
-
+		c.MustGet(gin.AuthUserKey)
 		// Parse JSON
 		var json struct {
 			Value string `json:"value" binding:"required"`
 		}
 
-		fmt.Println(c.Bind(&json))
-
 		if c.Bind(&json) == nil {
 			c.JSON(200, gin.H{"status": json.Value})
 		}
-		fmt.Println(test)
+
 	})
 
 	// Listen and Server in 0.0.0.0:8080
