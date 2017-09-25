@@ -3,7 +3,9 @@ package main
 import (
 	//"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/robvdl/pongo2gin"
 	"mysite/helper/apicode"
+	"shuaibingBlog/controllers"
 	"shuaibingBlog/helper"
 	"shuaibingBlog/models"
 )
@@ -12,6 +14,13 @@ func main() {
 	// Disable Console Color
 	// gin.DisableConsoleColor()
 	r := gin.Default()
+	r.HTMLRender = pongo2gin.New(pongo2gin.RenderOptions{
+		TemplateDir: "views",
+		ContentType: "text/html; charset=utf-8",
+	})
+
+	// Ping test
+	r.GET("/index", controllers.Index)
 
 	// Ping test
 	r.GET("/ping", func(c *gin.Context) {
