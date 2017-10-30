@@ -6,9 +6,11 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"reflect"
 	"regexp"
+	"strings"
 	"time"
 )
 
@@ -176,8 +178,16 @@ func appendToFile(fileName string, content string) error {
 }
 
 //读取文件需要经常进行错误检查，这个帮助方法可以精简下面的错误检查过程。
-func check(e error) {
+func CheckErr(e error) {
 	if e != nil {
 		panic(e)
 	}
+}
+
+func GetCurrentPath() string {
+	s, err := exec.LookPath(os.Args[0])
+	CheckErr(err)
+	i := strings.LastIndex(s, "\\")
+	path := string(s[0 : i+1])
+	return path
 }
