@@ -13,6 +13,7 @@ func main() {
 	// gin.DisableConsoleColor()
 	e := gin.Default()
 	conf := helper.Config
+	gin.SetMode(conf.Mod)
 	e.HTMLRender = pongo2gin.New(pongo2gin.RenderOptions{
 		TemplateDir: conf.TemplateDir,
 		ContentType: "text/html; charset=utf-8",

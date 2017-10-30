@@ -8,6 +8,7 @@ import (
 
 type Conf struct {
 	ID          int    `toml:"ID"`
+	Mod         string `toml:"Mod"`
 	Port        string `toml:"Port"`
 	AppName     string `toml:"AppName"`
 	TemplateDir string `toml:"TemplateDir"`
