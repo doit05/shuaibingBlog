@@ -1,12 +1,14 @@
 # id
 ID = 1
+# mod
+Mod = "release"
 # port
 Port = "8080"
 # AppName
 AppName = "shuaibingBlog"
 # TemplateDir
-TemplateDir = 'E:\programe\centos\gopath\src\shuaibingBlog\views'
+TemplateDir = '/root/yard/gopath/src/shuaibingBlog/views'
 # LogPath
-LogPath = 'E:\programe\centos\gopath\src\shuaibingBlog\logs'
+LogPath = '/root/yard/gopath/src/shuaibingBlog/logs'
 # mysqlcon
 Mysqlcon = 'root:root123@tcp(www.doit05.cn:3306)/yeat?charset=utf8&parseTime=True&loc=Local'
