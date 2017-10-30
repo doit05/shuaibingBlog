@@ -13,3 +13,7 @@ func Index(c *gin.Context) {
 	c.HTML(200, "index.html", pongo2.Context{"name": "world"})
 
 }
+
+func Ping(c *gin.Context) {
+	c.String(200, "pong")
+}
