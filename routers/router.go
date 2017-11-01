@@ -6,7 +6,6 @@ import (
 )
 
 func RegisterRouters(e *gin.Engine) {
-	e.Static("/", "./assets")
 	// Index
 	e.GET("/index", controllers.Index)
 	e.GET("/", controllers.Index)
