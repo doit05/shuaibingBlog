@@ -7,8 +7,9 @@ import (
 
 func RegisterRouters(e *gin.Engine) {
 	e.Static("/", "./assets")
-	// Ping test
+	// Index
 	e.GET("/index", controllers.Index)
+	e.GET("/", controllers.Index)
 
 	// Ping test
 	e.GET("/ping", controllers.Ping)
