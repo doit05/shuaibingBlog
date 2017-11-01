@@ -9,6 +9,6 @@ AppName = "shuaibingBlog"
 # TemplateDir
 TemplateDir = '/root/yard/gopath/src/shuaibingBlog/views'
 # LogPath
-LogPath = '/root/yard/gopath/src/shuaibingBlog/logs'
+LogPath = '/root/yard/gopath/src/shuaibingBlog/logs/log.log'
 # mysqlcon
 Mysqlcon = 'root:root123@tcp(www.doit05.cn:3306)/yeat?charset=utf8&parseTime=True&loc=Local'
