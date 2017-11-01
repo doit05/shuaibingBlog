@@ -6,10 +6,10 @@ import (
 )
 
 func RegisterRouters(e *gin.Engine) {
-	e.Static("/", "./assets")
+	//e.Static("/", "./assets")
+	e.Static("/assets", "E:/programe/centos/gopath/src/shuaibingBlog/assets")
 	// Index
 	e.GET("/index", controllers.Index)
-	e.GET("/", controllers.Index)
 
 	// Ping test
 	e.GET("/ping", controllers.Ping)

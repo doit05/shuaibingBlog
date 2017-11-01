@@ -5,7 +5,7 @@ import (
 	"github.com/robvdl/pongo2gin"
 	"shuaibingBlog/helper"
 	"shuaibingBlog/routers"
-	_"shuaibingBlog/utils"
+	_ "shuaibingBlog/utils"
 )
 
 func main() {
