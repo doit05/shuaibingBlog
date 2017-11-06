@@ -6,8 +6,6 @@ import (
 )
 
 func RegisterRouters(e *gin.Engine) {
-	//e.Static("/", "./assets")
-	e.Static("/assets", "E:/programe/centos/gopath/src/shuaibingBlog/assets")
 	// Index
 	e.GET("/index", controllers.Index)
 
