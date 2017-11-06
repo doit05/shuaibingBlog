@@ -3,12 +3,13 @@ package routers
 import (
 	"github.com/gin-gonic/gin"
 	"shuaibingBlog/controllers"
+	"shuaibingBlog/controllers/login"
 )
 
 func RegisterRouters(e *gin.Engine) {
 	// Index
 	e.GET("/index", controllers.Index)
-	e.GET("/", controllers.Index)
+	e.GET("/login", login.Login)
 
 	// Ping test
 	e.GET("/ping", controllers.Ping)
