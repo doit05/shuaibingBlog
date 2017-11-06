@@ -20,8 +20,8 @@ const (
 )
 
 // 获取错误代码对应的提示信息
-func Msg(code string) string {
-	msgMap := map[string]string{
+func Msg(code int) string {
+	msgMap := map[int]string{
 		Success:                  "success",
 		SystemError:              "系统错误",
 		MissParam:                "参数缺失",
