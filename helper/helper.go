@@ -122,19 +122,19 @@ func IsMobile(mobile string) bool {
 }
 
 type ApiRes struct {
-	Code string      `json:"status"`
+	Code int      `json:"status"`
 	Msg  string      `json:"msg"`
 	Data interface{} `json:"data"`
 }
 
 type ApiResArr struct {
-	Code string        `json:"status"`
+	Code int        `json:"status"`
 	Msg  string        `json:"msg"`
 	Data []interface{} `json:"data"`
 }
 
 // 初始化api返回数据
-func InitApiRes(code, msg string, data interface{}) *ApiRes {
+func InitApiRes(code int, msg string, data interface{}) *ApiRes {
 	apiRes := new(ApiRes)
 	apiRes.Code = code
 	apiRes.Msg = msg
