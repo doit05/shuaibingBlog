@@ -3,23 +3,20 @@ package weixin
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/silenceper/wechat/message"
+	"shuaibingBlog/helper/apicode"
+	"shuaibingBlog/service/weixin"
 	"shuaibingBlog/utils"
 )
 
 func Weixin(c *gin.Context) {
 
 	wc := utils.Weixin
+	wxs := &weixin.WeixinService{}
 
 	// 传入request和responseWriter
 	server := wc.GetServer(c.Request, c.Writer)
 	//设置接收消息的处理方法
-	server.SetMessageHandler(func(msg message.MixMessage) *message.Reply {
-
-		//回复消息：演示回复用户发送的消息
-		text := message.NewText(msg.Content)
-		return &message.Reply{MsgType: message.MsgTypeText, MsgData: text}
-	})
+	server.SetMessageHandler(wxs.MessageHandler)
 
 	//处理消息接收以及回复
 	err := server.Serve()
@@ -29,4 +26,14 @@ func Weixin(c *gin.Context) {
 	}
 	//发送回复的消息
 	server.Send()
+}
+
+func GetAccessToken(c *gin.Context) {
+	wc := utils.Weixin
+	accessToken, err := wc.GetAccessToken()
+	if err != nil {
+		utils.Log.Println(err)
+		c.String(apicode.QueryError, err.Error())
+	}
+	c.String(200, accessToken)
 }

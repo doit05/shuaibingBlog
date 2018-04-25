@@ -7,14 +7,15 @@ import (
 )
 
 type Conf struct {
-	ID          int    `toml:"ID"`
-	Mod         string `toml:"Mod"`
-	Port        string `toml:"Port"`
-	AppName     string `toml:"AppName"`
-	TemplateDir string `toml:"TemplateDir"`
-	LogPath     string `toml:"LogPath"`
-	Mysqlcon    string `toml:"Mysqlcon"`
-	Wechatconf WechatConfig `toml:"wechat"`
+	ID          int          `toml:"ID"`
+	Mod         string       `toml:"Mod"`
+	Port        string       `toml:"Port"`
+	AppName     string       `toml:"AppName"`
+	TemplateDir string       `toml:"TemplateDir"`
+	LogPath     string       `toml:"LogPath"`
+	Mysqlcon    string       `toml:"Mysqlcon"`
+	Redisconn   string       `toml:"Redisconn"`
+	Wechatconf  WechatConfig `toml:"wechat"`
 }
 
 type WechatConfig struct {

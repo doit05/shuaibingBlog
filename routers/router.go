@@ -9,6 +9,7 @@ import (
 
 func RegisterRouters(e *gin.Engine) {
 	e.Any("/wechat", weixin.Weixin)
+	e.GET("/weixinaccess", weixin.GetAccessToken)
 	// Index
 	e.GET("/index", controllers.Index)
 	e.GET("/login", login.Login)
