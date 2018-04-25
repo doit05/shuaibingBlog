@@ -8,7 +8,7 @@ import (
 )
 
 var Conn redis.Conn
-var Cache Redis
+var Cache *Redis
 
 type Redis struct {
 	conn redis.Conn
@@ -22,7 +22,7 @@ func init() {
 		panic("redis err" + helper.Config.Redisconn)
 	}
 	Conn = c
-	Cache = Redis{conn: c}
+	Cache = &Redis{conn: c}
 }
 
 //Get 获取一个值
@@ -75,6 +75,5 @@ func (r *Redis) Delete(key string) error {
 	if _, err := conn.Do("DEL", key); err != nil {
 		return err
 	}
-
 	return nil
 }
