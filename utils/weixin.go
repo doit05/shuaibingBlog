@@ -19,7 +19,7 @@ func init() {
 	config.Cache = Cache
 
 	wc := wechat.NewWechat(config)
-	if wc != nil {
+	if wc == nil {
 		panic("init wechat error")
 	}
 	Weixin = wc
