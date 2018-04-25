@@ -4,9 +4,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"shuaibingBlog/controllers"
 	"shuaibingBlog/controllers/login"
+	"shuaibingBlog/controllers/weixin"
 )
 
 func RegisterRouters(e *gin.Engine) {
+	e.Any("/wechat", weixin.Weixin)
 	// Index
 	e.GET("/index", controllers.Index)
 	e.GET("/login", login.Login)

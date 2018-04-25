@@ -2,6 +2,12 @@
 
 
 [[projects]]
+  name = "github.com/BurntSushi/toml"
+  packages = ["."]
+  revision = "b26d9c308763d68093482582cea63d69be07a0f0"
+  version = "v0.3.0"
+
+[[projects]]
   name = "github.com/flosch/pongo2"
   packages = ["."]
   revision = "5e81b817a0c48c1c57cdf1a9056cf76bdee02ca9"
@@ -82,6 +88,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "ae651b994ca3d0acd24c509aaa3152ee449ac68ee3cc0aee02ff596ce31fea50"
+  inputs-digest = "b56a66814aef435d3f1d05cd93740bc13b03030d07365f6880320e9cc07f75de"
   solver-name = "gps-cdcl"
   solver-version = 1

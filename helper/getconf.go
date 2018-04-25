@@ -14,6 +14,14 @@ type Conf struct {
 	TemplateDir string `toml:"TemplateDir"`
 	LogPath     string `toml:"LogPath"`
 	Mysqlcon    string `toml:"Mysqlcon"`
+	Wechatconf WechatConfig `toml:"wechat"`
+}
+
+type WechatConfig struct {
+	AppID          string
+	AppSecret      string
+	Token          string
+	EncodingAESKey string
 }
 
 var Config *Conf
