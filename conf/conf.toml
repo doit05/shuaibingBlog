@@ -3,7 +3,7 @@ ID = 1
 # mod
 Mod = "release"
 # port
-Port = "8080"
+Port = "80"
 # AppName
 AppName = "shuaibingBlog"
 # TemplateDir
@@ -11,4 +11,13 @@ TemplateDir = '/root/yard/gopath/src/shuaibingBlog/views'
 # LogPath
 LogPath = '/root/yard/gopath/src/shuaibingBlog/logs/log.log'
 # mysqlcon
-Mysqlcon = 'root:root123@tcp(www.doit05.cn:3306)/test?charset=utf8&parseTime=True&loc=Local'
+Mysqlcon = 'root:root123@tcp(www.doit05.cn:3306)/yeat?charset=utf8&parseTime=True&loc=Local'
+
+# Redis配置
+Redisconn = '127.0.0.1:6379'
+
+[wechat]
+AppID =  "wx11abf14c4e9143bd"
+AppSecret = "50e5faa03245d550fb8e222920496e1d"
+Token =  "doit05"
+EncodingAESKey = "x2GfBOf3nCCQt6hrQ6bGZpDrCiooQAUDmZdZDUWcqh6"

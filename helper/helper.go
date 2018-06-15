@@ -122,13 +122,13 @@ func IsMobile(mobile string) bool {
 }
 
 type ApiRes struct {
-	Code int      `json:"status"`
+	Code int         `json:"status"`
 	Msg  string      `json:"msg"`
 	Data interface{} `json:"data"`
 }
 
 type ApiResArr struct {
-	Code int        `json:"status"`
+	Code int           `json:"status"`
 	Msg  string        `json:"msg"`
 	Data []interface{} `json:"data"`
 }
